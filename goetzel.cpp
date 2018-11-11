@@ -14,7 +14,6 @@ rowvec goertzel(rowvec signal, double targetfreq, int blocksize, int samplingrat
 	
 	rowvec magnitudes = rowvec(blocks);
 	for (int i = 0; i < blocks; i++) {		
-		rowvec sample = rowvec(blocksize);
 		magnitudes[i] = goertzelstep(signal, coef, blocksize,i);
 	}
 	return magnitudes;	
