@@ -11,9 +11,6 @@ rowvec goertzel(rowvec signal, double targetfreq, int blocksize, int samplingrat
 	double cosw = cos(w);
 	//double sinw = sin(w);
 	double coef = 2 * cosw;
-	double stepm0 = 0;
-	double stepm1 = 0;
-	double stepm2 = 0;
 	
 	rowvec magnitudes = rowvec(blocks);
 	for (int i = 0; i < blocks; i++) {		
