@@ -5,7 +5,7 @@ using namespace std;
 using namespace arma;
 
 rowvec goertzel(rowvec signal, double targetfreq, int blocksize, int samplingrate) {
-	int blocks = samplingrate / blocksize;
+	int blocks = samplingrate/2 / blocksize;
 	double k = floor(0.5 + blocksize * targetfreq / samplingrate);
 	double w = k * 2 * 3.14159 / blocksize;
 	double cosw = cos(w);
